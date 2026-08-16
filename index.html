@@ -1,0 +1,3079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The JAC India | Loans & Financial Solutions</title>
+<meta name="description" content="The JAC India">
+
+<style>
+
+/* =========================================================
+   THE JAC INDIA
+   SINGLE FILE WEBSITE
+   HTML + CSS + JAVASCRIPT
+   ========================================================= */
+
+:root{
+    --blue:#0754b8;
+    --blue2:#0b6bd3;
+    --dark:#102b52;
+    --text:#53657d;
+    --green:#10b981;
+    --light:#f5f9ff;
+    --border:#e4ebf4;
+    --white:#fff;
+    --shadow:0 8px 30px rgba(21,61,108,.10);
+    --radius:14px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+select{
+    font-family:inherit;
+}
+
+.container{
+   /* width:min(1180px,96%);
+    margin:auto;*/
+    width:96%;
+    max-width:1400px;
+    margin:0 auto;
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.topbar{
+    background:#f4f8fd;
+    border-bottom:2px solid #e9e8f5;
+    font-size:16px;
+}
+
+.topbar-inner{
+    min-height:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.topbar-right{
+    display:flex;
+    gap:22px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    border-bottom:1px solid #edf1f6;
+}
+
+.navbar{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-symbol{
+    width:43px;
+    height:43px;
+    position:relative;
+    display:flex;
+    align-items:end;
+    justify-content:center;
+}
+
+.logo-symbol span{
+    display:block;
+    width:7px;
+    margin:0 2px;
+    background:linear-gradient(#0c72dc,#09b89c);
+    border-radius:4px 4px 0 0;
+}
+
+.logo-symbol span:nth-child(1){height:19px}
+.logo-symbol span:nth-child(2){height:31px}
+.logo-symbol span:nth-child(3){height:24px}
+.logo-symbol span:nth-child(4){height:38px}
+
+.logo-title{
+    color:#0b3265;
+    font-size:21px;
+    font-weight:800;
+    line-height:1;
+}
+
+.logo-subtitle{
+    color:#718198;
+    font-size:12px;
+    letter-spacing:.8px;
+    margin-top:4px;
+    display:block;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav>a,
+.dropdown>a{
+    font-size:14px;
+    font-weight:600;
+    color:#142b4b;
+}
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown>a::after{
+    content:"⌄";
+    margin-left:5px;
+    font-size:13px;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:30px;
+    left:-15px;
+    width:220px;
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+    border-radius:10px;
+    padding:10px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:.25s;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:9px 12px;
+    font-size:13px;
+    border-radius:7px;
+}
+
+.dropdown-menu a:hover{
+    background:#eef6ff;
+    color:var(--blue);
+}
+
+.apply-btn{
+    background:var(--blue);
+    color:#fff !important;
+    padding:13px 22px;
+    border-radius:28px;
+}
+
+.mobile-menu{
+    display:none;
+    font-size:27px;
+    border:0;
+    background:none;
+    color:var(--dark);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+    min-height:650px;
+    background:
+    radial-gradient(circle at 80% 20%,#e6f3ff 0,transparent 34%),
+    linear-gradient(180deg,#fff,#f8fbff);
+    overflow:hidden;
+}
+
+.hero-inner{
+    min-height:650px;
+    display:grid;
+    grid-template-columns:46% 54%;
+    align-items:center;
+}
+
+.hero-content{
+    padding:55px 0;
+}
+
+.hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:#edf6ff;
+    color:var(--blue);
+    border-radius:25px;
+    padding:8px 15px;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:55px;
+    line-height:1.08;
+    color:var(--dark);
+    letter-spacing:-2px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:var(--blue);
+}
+
+.hero-text{
+    font-size:17px;
+    max-width:540px;
+    margin-bottom:28px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 24px;
+    border-radius:28px;
+    font-weight:700;
+    font-size:13px;
+    border:0;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-blue{
+    background:linear-gradient(135deg,#0751af,#0871dc);
+    color:#fff;
+    box-shadow:0 9px 22px rgba(7,81,175,.22);
+}
+
+.btn-white{
+    color:var(--blue);
+    border:1px solid #b9cee6;
+    background:#fff;
+}
+
+.hero-points{
+    display:flex;
+    gap:30px;
+    margin-top:30px;
+}
+
+.hero-point{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.point-icon{
+    width:35px;
+    height:35px;
+    background:#eaf4ff;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+
+.hero-point strong{
+    display:block;
+    color:var(--dark);
+    font-size:11px;
+}
+
+.hero-point small{
+    font-size:9px;
+}
+
+.hero-art{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.art-circle{
+    width:500px;
+    height:500px;
+    max-width:100%;
+    border-radius:50%;
+    background:linear-gradient(145deg,#eef7ff,#dceeff);
+    position:relative;
+}
+
+.city{
+    position:absolute;
+    bottom:85px;
+    left:70px;
+    right:55px;
+    height:190px;
+    display:flex;
+    align-items:end;
+    gap:10px;
+    opacity:.28;
+}
+
+.building{
+    background:#82a9d2;
+    width:45px;
+    border-radius:4px 4px 0 0;
+}
+
+.building:nth-child(1){height:115px}
+.building:nth-child(2){height:160px}
+.building:nth-child(3){height:100px}
+.building:nth-child(4){height:185px}
+.building:nth-child(5){height:135px}
+.building:nth-child(6){height:170px}
+.building:nth-child(7){height:95px}
+
+.house-art{
+    position:absolute;
+    bottom:90px;
+    left:95px;
+    width:250px;
+    height:160px;
+    background:#fff;
+    border:5px solid #1261bd;
+    border-radius:5px;
+    z-index:3;
+}
+
+.roof{
+    position:absolute;
+    width:185px;
+    height:185px;
+    background:#1261bd;
+    transform:rotate(45deg);
+    top:-98px;
+    left:29px;
+    border-radius:10px;
+}
+
+.house-door{
+    position:absolute;
+    bottom:0;
+    left:96px;
+    width:55px;
+    height:90px;
+    background:#dcecff;
+    border:3px solid #1261bd;
+    z-index:5;
+}
+
+.house-window{
+    position:absolute;
+    top:43px;
+    width:52px;
+    height:52px;
+    background:#c6e8ff;
+    border:3px solid #1261bd;
+    z-index:5;
+}
+
+.window1{left:23px}
+.window2{right:23px}
+
+.car{
+    position:absolute;
+    z-index:6;
+    bottom:55px;
+    left:25px;
+    width:180px;
+    height:52px;
+    background:#0870d7;
+    border-radius:55px 65px 15px 15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+.car:before{
+    content:"";
+    position:absolute;
+    width:95px;
+    height:45px;
+    background:#0870d7;
+    top:-28px;
+    left:42px;
+    border-radius:55px 55px 0 0;
+}
+
+.car-window{
+    position:absolute;
+    z-index:2;
+    width:38px;
+    height:23px;
+    background:#cbeaff;
+    top:-20px;
+}
+
+.car-window.one{left:52px}
+.car-window.two{left:94px}
+
+.wheel{
+    position:absolute;
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:#1c2e42;
+    bottom:-14px;
+    border:5px solid #fff;
+}
+
+.wheel.one{left:25px}
+.wheel.two{right:25px}
+
+.gold-stack{
+    position:absolute;
+    z-index:7;
+    right:25px;
+    bottom:80px;
+}
+
+.gold-stack span{
+    display:block;
+    width:70px;
+    height:16px;
+    background:#eeb72c;
+    border-radius:50%;
+    margin-top:-4px;
+    border:2px solid #d49b08;
+}
+
+/* =========================================================
+   TRUST STRIP
+   ========================================================= */
+
+.trust-strip{
+    background:#fff;
+    border-top:1px solid #edf2f8;
+    border-bottom:1px solid #edf2f8;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.trust-box{
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border-right:1px solid var(--border);
+}
+
+.trust-box:last-child{
+    border-right:0;
+}
+
+.trust-box-icon{
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    background:#edf6ff;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:19px;
+}
+
+.trust-box strong{
+    color:var(--dark);
+    font-size:12px;
+    display:block;
+}
+
+.trust-box small{
+    font-size:10px;
+}
+
+/* =========================================================
+   COMMON SECTION
+   ========================================================= */
+
+.section{
+    padding:75px 0;
+}
+
+.section-head{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 38px;
+}
+
+.section-label{
+    color:var(--blue);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.7px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+.section-head h2{
+    color:var(--dark);
+    font-size:34px;
+    line-height:1.2;
+    margin-bottom:10px;
+}
+
+.section-head p{
+    font-size:14px;
+}
+
+/* =========================================================
+   LOAN PRODUCTS
+   ========================================================= */
+
+.products{
+    background:#fff;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+}
+
+.product{
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:#fff;
+    padding:22px 13px;
+    text-align:center;
+    transition:.25s;
+    min-height:235px;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--shadow);
+    border-color:#c8ddf4;
+}
+
+.product-icon{
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:47px;
+    margin-bottom:8px;
+}
+
+.product h3{
+    color:var(--dark);
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+.product p{
+    font-size:11px;
+    min-height:45px;
+}
+
+.product a{
+    color:var(--blue);
+    font-weight:700;
+    font-size:11px;
+}
+
+/* =========================================================
+   SPLIT HERO + TWO BUSINESS PATHS
+   ========================================================= */
+
+.hero-paths{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    padding:22px 0;
+}
+
+.hero-path-head{
+    padding-left:6px;
+    margin-bottom:2px;
+}
+
+.hero-path-head .section-label{
+    margin-bottom:5px;
+}
+
+.hero-path-head h2{
+    color:var(--dark);
+    font-size:27px;
+    line-height:1.15;
+    margin-bottom:6px;
+}
+
+.hero-path-head p{
+    font-size:12px;
+    line-height:1.5;
+    max-width:500px;
+}
+
+.path-stack{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.path-card{
+    position:relative;
+    overflow:hidden;
+    border:1px solid #dfe8f3;
+    border-radius:16px;
+    padding:18px 20px;
+    background:#fff;
+    box-shadow:0 10px 28px rgba(21,61,108,.08);
+    transition:.25s;
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:15px;
+    align-items:start;
+    min-height:170px;
+}
+
+.path-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 40px rgba(21,61,108,.13);
+}
+
+.path-card.primary{
+    background:linear-gradient(145deg,#062f6c,#0756af);
+    color:#fff;
+    border-color:#0756af;
+}
+
+.path-icon{
+    width:48px;
+    height:48px;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    background:#eaf4ff;
+}
+
+.path-card.primary .path-icon{
+    background:rgba(255,255,255,.13);
+}
+
+.path-content h3{
+    color:var(--dark);
+    font-size:21px;
+    line-height:1.2;
+    margin:0 0 8px;
+}
+
+.path-card.primary .path-content h3{
+    color:#fff;
+}
+
+.path-content p{
+    font-size:11px;
+    line-height:1.55;
+    margin-bottom:8px;
+}
+
+.path-points{
+    list-style:none;
+    margin:0 0 10px;
+    padding:0;
+}
+
+.path-points li{
+    font-size:10px;
+    margin:4px 0;
+    padding-left:14px;
+    position:relative;
+}
+
+.path-points li:before{
+    content:'✓';
+    position:absolute;
+    left:0;
+    color:#08b89b;
+    font-weight:700;
+}
+
+.path-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 16px;
+    border-radius:24px;
+    background:var(--blue);
+    color:#fff;
+    font-size:10px;
+    font-weight:700;
+}
+
+.path-card.primary .path-btn{
+    background:#fff;
+    color:var(--blue);
+}
+
+@media(min-width:1001px){
+    .hero-paths{
+        padding:18px 0;
+    }
+    .path-card{
+        min-height:165px;
+    }
+}
+
+/* =========================================================
+   FEATURED SECTION
+   ========================================================= */
+
+.featured{
+    background:#f4f8fd;
+}
+
+.featured-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:25px;
+}
+
+.feature-card{
+    border-radius:17px;
+    padding:40px;
+    min-height:300px;
+    position:relative;
+    overflow:hidden;
+}
+
+.feature-blue{
+    background:linear-gradient(135deg,#0751ac,#0870d7);
+    color:#fff;
+}
+
+.feature-light{
+    background:#fff;
+    border:1px solid var(--border);
+}
+
+.feature-card h2{
+    font-size:28px;
+    line-height:1.2;
+    margin-bottom:12px;
+}
+
+.feature-card p{
+    font-size:13px;
+    max-width:470px;
+}
+
+.feature-card .btn{
+    margin-top:24px;
+}
+
+.feature-blue .btn{
+    background:#fff;
+    color:var(--blue);
+}
+
+.feature-light h2{
+    color:var(--dark);
+}
+
+.feature-light strong{
+    color:var(--blue);
+}
+
+/* =========================================================
+   WHY US
+   ========================================================= */
+
+.why{
+    background:#f3f8ff;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+}
+
+.why-item{
+    text-align:center;
+    padding:20px;
+    border-right:1px solid #dce8f5;
+}
+
+.why-item:last-child{
+    border:0;
+}
+
+.why-icon{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#e4f1ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    color:var(--blue);
+    font-size:27px;
+}
+
+.why-item h3{
+    color:var(--dark);
+    font-size:14px;
+    margin-bottom:7px;
+}
+
+.why-item p{
+    font-size:11px;
+}
+
+/* =========================================================
+   PROCESS + FORM
+   ========================================================= */
+
+.process{
+    background:#fff;
+}
+
+.process-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.process-title h2{
+    color:var(--dark);
+    font-size:36px;
+    line-height:1.2;
+    margin-bottom:30px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+}
+
+.step{
+    text-align:center;
+    position:relative;
+}
+
+.step:not(:last-child):after{
+    content:"";
+    position:absolute;
+    width:60%;
+    border-top:2px dashed #b7cde6;
+    right:-30%;
+    top:29px;
+}
+
+.step-icon{
+    position:relative;
+    z-index:2;
+    width:58px;
+    height:58px;
+    margin:auto;
+    border-radius:50%;
+    background:#eaf4ff;
+    color:var(--blue);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+}
+
+.step-number{
+    margin-top:8px;
+    color:var(--blue);
+    font-size:11px;
+    font-weight:bold;
+}
+
+.step h4{
+    color:var(--dark);
+    font-size:12px;
+    margin-top:3px;
+}
+
+.step p{
+    font-size:10px;
+    margin-top:5px;
+}
+
+.form-card{
+    background:linear-gradient(145deg,#062f6c,#0756af);
+    padding:30px;
+    border-radius:17px;
+    box-shadow:0 20px 45px rgba(6,50,108,.2);
+}
+
+.form-card .label{
+    color:#70c5ff;
+    font-size:10px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.form-card h2{
+    color:#fff;
+    text-align:center;
+    font-size:23px;
+    margin:6px 0 6px;
+}
+
+.form-card>p{
+    color:#c8daf0;
+    text-align:center;
+    font-size:11px;
+    margin-bottom:20px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.form-control{
+    width:100%;
+    padding:13px;
+    border:0;
+    outline:none;
+    border-radius:6px;
+    font-size:12px;
+}
+
+textarea.form-control{
+    resize:vertical;
+    min-height:70px;
+}
+
+.form-full{
+    grid-column:1/-1;
+}
+
+.submit{
+    background:#08b89b;
+    color:#fff;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.form-security{
+    text-align:center;
+    color:#bfd4ed;
+    font-size:9px;
+    margin-top:10px;
+}
+
+/* =========================================================
+   CALCULATOR
+   ========================================================= */
+
+.calculators{
+    background:#f4f8fd;
+}
+
+.loan-calculator-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.calculator-left,
+.calculator-right{
+    min-width:0;
+}
+
+.calculator-left h3,
+.calculator-right h3{
+    color:var(--dark);
+    font-size:19px;
+    margin-bottom:20px;
+}
+
+.calc-input{
+    margin-bottom:16px;
+}
+
+.calc-input label{
+    display:block;
+    color:#52647c;
+    font-size:11px;
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.calc-input input{
+    width:100%;
+    padding:12px 13px;
+    border:1px solid #d9e3ef;
+    border-radius:7px;
+    outline:none;
+    font-size:13px;
+    color:#243b5a;
+    background:#fff;
+}
+
+.calc-input input:focus{
+    border-color:var(--blue);
+    box-shadow:0 0 0 3px rgba(7,84,184,.08);
+}
+
+.loan-results{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:20px;
+}
+
+.result-card{
+    background:#f7faff;
+    border:1px solid #e3ecf7;
+    border-radius:10px;
+    padding:14px;
+}
+
+.result-card span{
+    display:block;
+    font-size:10px;
+    color:#61728a;
+    margin-bottom:4px;
+}
+
+.result-card strong{
+    display:block;
+    color:var(--blue);
+    font-size:19px;
+    line-height:1.2;
+}
+
+.result-card.total-card{
+    grid-column:1/-1;
+    background:#eef6ff;
+    border-color:#d7e8fa;
+}
+
+.result-card.total-card strong{
+    font-size:23px;
+}
+
+.chart-card{
+    height:100%;
+    min-height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.loan-chart-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:5px auto 20px;
+}
+
+.loan-chart{
+    width:245px;
+    height:245px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    background:conic-gradient(var(--blue) 0deg,var(--blue) 0deg,#f59e0b 0deg,#f59e0b 360deg);
+    transition:background .3s ease;
+}
+
+.loan-chart::before{
+    content:"";
+    position:absolute;
+    width:155px;
+    height:155px;
+    border-radius:50%;
+    background:#fff;
+}
+
+.loan-chart-center{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.loan-chart-center span{
+    display:block;
+    color:#728198;
+    font-size:11px;
+    margin-bottom:2px;
+}
+
+.loan-chart-center strong{
+    display:block;
+    color:var(--dark);
+    font-size:21px;
+}
+
+.chart-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.chart-detail{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    background:#f8fbff;
+    border:1px solid #e5edf6;
+    border-radius:9px;
+    padding:12px;
+}
+
+.chart-dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    flex:0 0 11px;
+}
+
+.principal-dot{
+    background:var(--blue);
+}
+
+.interest-dot{
+    background:#f59e0b;
+}
+
+.chart-detail small{
+    display:block;
+    color:#718097;
+    font-size:9px;
+}
+
+.chart-detail strong{
+    display:block;
+    color:var(--dark);
+    font-size:13px;
+    margin-top:2px;
+}
+
+.summary-box{
+    margin-top:14px;
+    border-top:1px solid #e5edf6;
+    padding-top:12px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:5px 0;
+}
+
+.summary-row span{
+    font-size:10px;
+    color:#68798e;
+}
+
+.summary-row strong{
+    font-size:11px;
+    color:var(--dark);
+}
+
+/* =========================================================
+   CALCULATOR MOBILE
+========================================================= */
+
+@media(max-width:1000px){
+
+    .loan-calculator-box{
+        grid-template-columns:1fr;
+    }
+
+    .chart-card{
+        min-height:auto;
+    }
+
+}
+
+@media(max-width:560px){
+
+    .loan-calculator-box{
+        padding:20px;
+    }
+
+    .loan-results{
+        grid-template-columns:1fr;
+    }
+
+    .result-card.total-card{
+        grid-column:auto;
+    }
+
+    .chart-details{
+        grid-template-columns:1fr;
+    }
+
+    .loan-chart{
+        width:210px;
+        height:210px;
+    }
+
+    .loan-chart::before{
+        width:135px;
+        height:135px;
+    }
+
+}
+/* =========================================================
+   PARTNERS
+   ========================================================= */
+
+.partners{
+    padding:50px 0;
+    background:#fff;
+}
+
+.partner-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:15px;
+}
+
+.partner{
+    height:68px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#fff;
+    color:#68798d;
+    font-weight:bold;
+    font-size:12px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta{
+    padding:65px 0;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,#0750a9,#0870d8);
+    border-radius:18px;
+    padding:45px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.cta-box h2{
+    color:#fff;
+    font-size:31px;
+    line-height:1.2;
+}
+
+.cta-box p{
+    color:#d2e4fa;
+    margin-top:7px;
+    font-size:13px;
+}
+
+.cta-box .btn{
+    background:#fff;
+    color:var(--blue);
+    white-space:nowrap;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+    background:#062d63;
+    color:#b7cae3;
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1.2fr 1.3fr;
+    gap:40px;
+}
+
+.footer-logo p{
+    font-size:11px;
+    line-height:1.8;
+    max-width:270px;
+    margin-top:15px;
+}
+
+footer h4{
+    color:#fff;
+    font-size:13px;
+    margin-bottom:17px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    font-size:11px;
+    margin-bottom:9px;
+}
+
+footer li a:hover{
+    color:#fff;
+}
+
+.contact{
+    display:flex;
+    gap:9px;
+    font-size:11px;
+    margin-bottom:13px;
+}
+
+.social{
+    display:flex;
+    gap:8px;
+    margin-top:17px;
+}
+
+.social a{
+    width:31px;
+    height:31px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    background:rgba(255,255,255,.13);
+    font-size:12px;
+}
+
+.whatsapp{
+    display:inline-block;
+    margin-top:8px;
+    background:#08b89b;
+    color:#fff;
+    padding:9px 16px;
+    border-radius:25px;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.copyright{
+    margin-top:35px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.12);
+    display:flex;
+    justify-content:space-between;
+    font-size:10px;
+}
+
+/* =========================================================
+   FLOATING WHATSAPP
+   ========================================================= */
+
+.whatsapp-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#10c98b;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    z-index:999;
+    box-shadow:0 5px 25px rgba(0,0,0,.2);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:1000px){
+
+    .nav{
+        gap:15px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .why-item:nth-child(3){
+        border-right:0;
+    }
+
+    .partner-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    .topbar{
+        display:none;
+    }
+
+    .navbar{
+        height:68px;
+    }
+
+    .mobile-menu{
+        display:block;
+    }
+
+    .nav{
+        display:none;
+        position:absolute;
+        top:68px;
+        left:0;
+        right:0;
+        background:#fff;
+        padding:20px 5%;
+        box-shadow:0 12px 25px rgba(0,0,0,.1);
+        flex-direction:column;
+        align-items:flex-start;
+        gap:17px;
+    }
+
+    .nav.active{
+        display:flex;
+    }
+
+    .dropdown-menu{
+        position:static;
+        display:none;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        box-shadow:none;
+        border:0;
+    }
+
+    .dropdown.open .dropdown-menu{
+        display:block;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        text-align:center;
+        min-height:auto;
+    }
+
+    .hero-paths{
+        padding:20px 0 50px;
+        text-align:left;
+    }
+
+    .hero-path-head{
+        padding-left:0;
+        text-align:center;
+    }
+
+    .hero-content{
+        padding-bottom:20px;
+    }
+
+    .hero-text{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons,
+    .hero-points{
+        justify-content:center;
+    }
+
+    .hero-art{
+        padding-bottom:50px;
+    }
+
+    .process-layout{
+        grid-template-columns:1fr;
+    }
+
+    .featured-grid{
+        grid-template-columns:1fr;
+    }
+
+    .calculator-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cta-box{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:560px){
+
+    .logo-title{
+        font-size:17px;
+    }
+
+    .hero h1{
+        font-size:39px;
+    }
+
+    .hero-text{
+        font-size:15px;
+    }
+
+    .hero-points{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .art-circle{
+        width:330px;
+        height:330px;
+    }
+
+    .house-art{
+        transform:scale(.65);
+        transform-origin:center;
+        left:40px;
+        bottom:45px;
+    }
+
+    .car{
+        transform:scale(.7);
+        left:5px;
+        bottom:35px;
+    }
+
+    .gold-stack{
+        transform:scale(.7);
+        right:0;
+        bottom:60px;
+    }
+
+    .city{
+        left:30px;
+        right:30px;
+        bottom:40px;
+        transform:scale(.7);
+    }
+
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-box{
+        border-bottom:1px solid var(--border);
+    }
+
+    .product-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-item{
+        border-right:0;
+        border-bottom:1px solid #dce8f5;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+        gap:25px;
+    }
+
+    .step:not(:last-child):after{
+        display:none;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-full{
+        grid-column:auto;
+    }
+
+    .partner-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .copyright{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .cta-box{
+        padding:35px 20px;
+    }
+
+    .cta-box h2{
+        font-size:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="topbar">
+<div class="container topbar-inner">
+
+<div>
+    Jagannath Ananad Capital Solutions
+</div>
+
+<div class="topbar-right">
+    <span>📞 +91 XXXXX XXXXX</span>
+    <span>✉ contact@thejacindia.com</span>
+</div>
+
+</div>
+</div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+
+<div class="logo-symbol">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div>
+    <div class="logo-title">THE JAC INDIA</div>
+    <span class="logo-subtitle">
+        Let's Grow Together
+    </span>
+</div>
+
+</a>
+
+<nav class="nav" id="nav">
+    <a href="#home">Home</a>
+    <a href="#loans">Loans</a>
+    <a href="#customer-apply">Need a Loan?</a>
+    <a href="#connector-apply">Have a Loan File?</a>
+    <a href="#calculators">Calculator</a>
+    <a href="#about">About Us</a>
+</nav>
+
+<button class="mobile-menu" type="button" aria-label="Open menu" onclick="document.getElementById('nav').classList.toggle('active')">
+☰
+</button>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-inner">
+
+<div class="hero-content">
+
+<div class="hero-tag">
+    ● LOANS MADE SIMPLE
+</div>
+
+<h1>
+Right Loan.<br>
+<span>Right Guidance.</span>
+</h1>
+
+<p class="hero-text">
+Find suitable loan and financial solutions with
+professional guidance, multiple lending options
+and a simple application process.
+</p>
+
+
+
+<div class="hero-points">
+    <div class="hero-point">
+        <div class="point-icon">✓</div>
+        <div><strong>Multiple Lending Options</strong><small>Suitable lender choices</small></div>
+    </div>
+
+    <div class="hero-point">
+        <div class="point-icon">⚡</div>
+        <div><strong>Guided Processing</strong><small>Support from enquiry to disbursal</small></div>
+    </div>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE: TWO BUSINESS PATHS -->
+<div class="hero-paths">
+
+
+
+
+<div class="path-stack">
+
+<div class="path-card primary" id="customer-path">
+    <div class="path-icon">💳</div>
+    <div class="path-content">
+        <h3>Need a Loan?</h3>
+        <p>Tell us what you need. We help you explore suitable loan options and guide you through the application process.</p>
+        <ul class="path-points">
+            <li>Home, Personal, Business &amp; other loan options</li>
+            <li>Eligibility and documentation guidance</li>
+        </ul>
+        <a href="#customer-apply" class="path-btn">Apply for a Loan →</a>
+    </div>
+</div>
+
+<div class="path-card" id="connector-path">
+    <div class="path-icon">🤝</div>
+    <div class="path-content">
+        <h3>FOR CONNECTORS / DSAs</h3>
+        <p>Have a customer or loan file? Share the file with us. We help assess the case, identify a suitable lender and coordinate the processing journey.</p>
+        <ul class="path-points">
+            <li>Submit your eligible customer loan files</li>
+            <li>Placement support with suitable banks / NBFCs</li>
+            <li>Connector payout handled as per agreed arrangement</li>
+        </ul>
+        <a href="#connector-apply" class="path-btn">Submit a Loan File →</a>
+    </div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================================================
+     LOAN PRODUCTS
+========================================================= -->
+
+<section class="section products" id="loans">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+    OUR LOAN PRODUCTS
+</div>
+
+<h2>
+Loans for Every Need
+</h2>
+
+<p>
+Explore financial solutions designed for your
+personal, property, business and vehicle needs.
+</p>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<div class="product" id="home-loan">
+
+<div class="product-icon">🏠</div>
+
+<h3>Home Loan</h3>
+
+<p>
+Finance your dream home with suitable
+home loan options.
+</p>
+
+</div>
+
+
+<div class="product" id="business-loan">
+
+<div class="product-icon">🏢</div>
+
+<h3>Business Loan</h3>
+
+<p>
+Financial support for business expansion
+and working capital.
+</p>
+
+</div>
+
+
+<div class="product" id="personal-loan">
+
+<div class="product-icon">👨‍💼</div>
+
+<h3>Personal Loan</h3>
+
+<p>
+Flexible financing for your personal
+financial requirements.
+</p>
+
+</div>
+
+
+<div class="product" id="mortgage-loan">
+
+<div class="product-icon">🏦</div>
+
+<h3>Mortgage Loan</h3>
+
+<p>
+Explore loan options against eligible
+property.
+</p>
+
+</div>
+
+
+<div class="product" id="gold-loan">
+
+<div class="product-icon">💰</div>
+
+<h3>Gold Loan</h3>
+
+<p>
+Access funds against eligible gold
+jewellery.
+</p>
+
+</div>
+
+
+<div class="product" id="vehicle-loan">
+
+<div class="product-icon">🚗</div>
+
+<h3>Vehicle Loan</h3>
+
+<p>
+Finance your new or used vehicle with
+suitable options.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY CHOOSE US
+========================================================= -->
+
+<section class="section why" id="about">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+    WHY THE JAC INDIA
+</div>
+
+<h2>
+Why Choose Us?
+</h2>
+
+<p>
+We make the financial journey simpler through
+guidance, choice and transparent communication.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-item">
+
+<div class="why-icon">🤝</div>
+
+<h3>Multiple Lenders</h3>
+
+<p>
+Access options from multiple banks
+and financial institutions.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-icon">⚡</div>
+
+<h3>Quick Process</h3>
+
+<p>
+We help make the application journey
+simple and organised.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-icon">📄</div>
+
+<h3>Minimal Hassle</h3>
+
+<p>
+Guidance with documentation and
+application requirements.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-icon">👨‍💼</div>
+
+<h3>Expert Guidance</h3>
+
+<p>
+Understand your available options
+before proceeding.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-icon">🛡</div>
+
+<h3>Transparent Process</h3>
+
+<p>
+Clear communication throughout
+your application journey.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CUSTOMER + CONNECTOR PROCESS
+========================================================= -->
+
+<section class="section process" id="customer-apply">
+
+<div class="container process-layout">
+
+<div>
+
+<div class="section-label">
+    NEED A LOAN?
+</div>
+
+<div class="process-title">
+<h2>Simple Steps.<br>Clear Guidance.</h2>
+</div>
+
+<p>
+Tell us your requirement and our team will help you understand
+the available options and next steps.
+</p>
+
+<div class="steps" style="margin-top:35px">
+
+<div class="step">
+<div class="step-icon">📝</div>
+<div class="step-number">01</div>
+<h4>Submit</h4>
+<p>Share your requirement.</p>
+</div>
+
+<div class="step">
+<div class="step-icon">✓</div>
+<div class="step-number">02</div>
+<h4>Eligibility</h4>
+<p>Understand your options.</p>
+</div>
+
+<div class="step">
+<div class="step-icon">⚖</div>
+<div class="step-number">03</div>
+<h4>Compare</h4>
+<p>Review suitable options.</p>
+</div>
+
+<div class="step">
+<div class="step-icon">₹</div>
+<div class="step-number">04</div>
+<h4>Disbursal</h4>
+<p>Complete the process.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="form-card">
+
+<div class="label">CUSTOMER ENQUIRY</div>
+
+<h2>Apply for a Loan</h2>
+
+<p>
+Tell us what you need and our team will contact you.
+</p>
+
+<form name="loan-enquiry" method="POST" action="https://formsubmit.co/ajax/contact@thejacindia.com" onsubmit="submitEnquiry(event)">
+<input type="hidden" name="_subject" value="New Loan Enquiry | The JAC India">
+<input type="hidden" name="_template" value="table">
+<div style="display:none;">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+</div>
+<div class="form-grid">
+
+<input class="form-control" type="text" name="customer_name" placeholder="Your Name" required>
+<input class="form-control" type="tel" name="mobile" placeholder="Mobile Number" required>
+
+<select class="form-control" name="loan_type" required>
+<option value="">Select Loan Type</option>
+<option>Home Loan</option>
+<option>Personal Loan</option>
+<option>Business Loan</option>
+<option>Mortgage Loan</option>
+<option>Gold Loan</option>
+<option>Vehicle Loan</option>
+<option>Insurance</option>
+</select>
+
+<input class="form-control" type="number" name="loan_amount" placeholder="Required Amount">
+<input class="form-control" type="text" name="city" placeholder="City">
+<input class="form-control" type="email" name="email" placeholder="Email Address">
+
+<button class="btn submit form-full" type="submit">
+Submit Loan Enquiry →
+</button>
+
+</div>
+</form>
+
+<div class="form-security">
+🔒 Your information is kept confidential.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONNECTOR / FILE SUBMISSION
+========================================================= -->
+
+<section class="section process connector-section" id="connector-apply">
+
+<div class="container process-layout">
+
+<div>
+
+<div class="section-label">
+    FOR CONNECTORS / DSAs
+</div>
+
+<div class="process-title">
+<h2>Partner With The JAC India.</h2>
+</div>
+
+<p>
+Have a customer or loan file? Share it with us and our team will help assess,
+place and coordinate the file with a suitable lending partner.
+</p>
+
+<div class="steps" style="margin-top:35px">
+
+<div class="step">
+<div class="step-icon">📄</div>
+<div class="step-number">01</div>
+<h4>Submit</h4>
+<p>Share the file details.</p>
+</div>
+
+<div class="step">
+<div class="step-icon">✓</div>
+<div class="step-number">02</div>
+<h4>Assessment</h4>
+<p>We review the case.</p>
+</div>
+
+<div class="step">
+<div class="step-icon">🏦</div>
+<div class="step-number">03</div>
+<h4>Placement</h4>
+<p>Coordinate with the lender.</p>
+</div>
+
+<div class="step">
+<div class="step-icon">₹</div>
+<div class="step-number">04</div>
+<h4>Payout</h4>
+<p>After successful disbursal.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="form-card">
+
+<div class="label">CONNECTOR FILE SUBMISSION</div>
+
+<h2>Submit a Loan File</h2>
+
+<p>
+Share the file details and our team can get in touch for the next step.
+</p>
+
+<form name="connector-dsa" method="POST" action="https://formsubmit.co/ajax/contact@thejacindia.com" onsubmit="submitConnector(event)">
+<input type="hidden" name="_subject" value="New Connector / DSA Loan File | The JAC India">
+<input type="hidden" name="_template" value="table">
+<div style="display:none;">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+</div>
+<div class="form-grid">
+
+<input class="form-control" type="text" name="connector_name" placeholder="Connector / DSA Name" required>
+<input class="form-control" type="tel" name="connector_mobile" placeholder="Connector Mobile Number" required>
+
+<input class="form-control" type="text" name="customer_name" placeholder="Customer Name" required>
+<select class="form-control" name="loan_type" required>
+<option value="">Select Loan Type</option>
+<option>Home Loan</option>
+<option>Personal Loan</option>
+<option>Business Loan</option>
+<option>Mortgage Loan</option>
+<option>Gold Loan</option>
+<option>Vehicle Loan</option>
+</select>
+
+<input class="form-control" type="number" name="loan_amount" placeholder="Required Loan Amount">
+<input class="form-control" type="text" name="customer_city" placeholder="Customer City">
+
+
+<button class="btn submit form-full" type="submit">
+Submit Loan File →
+</button>
+
+</div>
+</form>
+
+<div class="form-security">
+🔒 File information should be shared only with the necessary authorization.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CALCULATOR
+========================================================= -->
+
+<section class="section calculators" id="calculators">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+    FINANCIAL TOOLS
+</div>
+
+<h2>
+Loan EMI Calculator
+</h2>
+
+<p>
+Calculate your monthly EMI, interest payable and total repayment amount.
+</p>
+
+</div>
+
+
+<div class="loan-calculator-box">
+
+    <!-- LEFT: INPUTS + RESULTS -->
+
+    <div class="calculator-left">
+
+        <h3>Calculate Your Loan</h3>
+
+
+        <div class="calc-input">
+
+            <label for="loanAmount">
+                Loan Amount (₹)
+            </label>
+
+            <input
+                id="loanAmount"
+                type="number"
+                value="500000"
+                min="1000"
+                step="1000"
+                oninput="calculateLoan()"
+            >
+
+        </div>
+
+
+        <div class="calc-input">
+
+            <label for="interestRate">
+                Interest Rate (% Per Year)
+            </label>
+
+            <input
+                id="interestRate"
+                type="number"
+                value="12"
+                min="0"
+                step=".1"
+                oninput="calculateLoan()"
+            >
+
+        </div>
+
+
+        <div class="calc-input">
+
+            <label for="loanTenure">
+                Loan Tenure (Years)
+            </label>
+
+            <input
+                id="loanTenure"
+                type="number"
+                value="5"
+                min="1"
+                max="40"
+                step="1"
+                oninput="calculateLoan()"
+            >
+
+        </div>
+
+
+        <div class="loan-results">
+
+            <div class="result-card">
+
+                <span>
+                    Monthly EMI
+                </span>
+
+                <strong id="monthlyEMI">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <span>
+                    Net Amount Payable
+                </span>
+
+                <strong id="principalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="result-card">
+
+                <span>
+                    Interest Payable
+                </span>
+
+                <strong id="interestAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="result-card total-card">
+
+                <span>
+                    Total Amount Payable
+                </span>
+
+                <strong id="totalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT: GRAPH -->
+
+    <div class="calculator-right chart-card">
+
+        <h3>Loan Summary</h3>
+
+
+        <div class="loan-chart-wrap">
+
+            <div class="loan-chart" id="loanChart">
+
+                <div class="loan-chart-center">
+
+                    <span>Total Payable</span>
+
+                    <strong id="chartTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="chart-details">
+
+            <div class="chart-detail">
+
+                <span class="chart-dot principal-dot"></span>
+
+                <div>
+
+                    <small>Principal Amount</small>
+
+                    <strong id="chartPrincipal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-detail">
+
+                <span class="chart-dot interest-dot"></span>
+
+                <div>
+
+                    <small>Total Interest</small>
+
+                    <strong id="chartInterest">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="summary-box">
+
+            <div class="summary-row">
+
+                <span>Loan Amount</span>
+
+                <strong id="summaryLoan">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>Interest Rate</span>
+
+                <strong id="summaryRate">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>Tenure</span>
+
+                <strong id="summaryTenure">
+                    0 Years
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>Interest Share</span>
+
+                <strong id="interestShare">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PARTNERS
+========================================================= -->
+
+<section class="partners">
+
+<div class="container">
+
+<div class="section-head" style="margin-bottom:25px">
+
+<div class="section-label">
+    OUR NETWORK
+</div>
+
+<h2 style="font-size:25px">
+Trusted Financial Partners
+</h2>
+
+</div>
+
+
+<div class="partner-grid">
+
+<div class="partner">BANK / NBFC</div>
+
+<div class="partner">BANK / NBFC</div>
+
+<div class="partner">BANK / NBFC</div>
+
+<div class="partner">BANK / NBFC</div>
+
+<div class="partner">BANK / NBFC</div>
+
+<div class="partner">BANK / NBFC</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div>
+
+<h2>
+Let's Find the Right Loan for You.
+</h2>
+
+<p>
+Start with a simple enquiry and speak with our team.
+</p>
+
+</div>
+
+<a href="#customer-apply" class="btn">
+Start Your Enquiry →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer id="contact">
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="logo">
+
+<div class="logo-symbol">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div>
+    <div class="logo-title" style="color:#fff">
+        THE JAC INDIA
+    </div>
+
+    <span class="logo-subtitle" style="color:#a9bfd9">
+        YOUR TRUSTED FINANCIAL PARTNER
+    </span>
+</div>
+
+</div>
+
+
+<p class="footer-logo p">
+The JAC India helps individuals and businesses
+explore suitable loan and financial solutions
+through professional guidance.
+</p>
+
+
+<div class="social">
+
+<a href="#">f</a>
+<a href="#">◎</a>
+<a href="#">in</a>
+<a href="#">▶</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>QUICK LINKS</h4>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#loans">Loans</a></li>
+<li><a href="#insurance">Insurance</a></li>
+<li><a href="#calculators">Calculators</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact Us</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>LOAN SERVICES</h4>
+
+<ul>
+
+<li><a href="#home-loan">Home Loan</a></li>
+<li><a href="#business-loan">Business Loan</a></li>
+<li><a href="#personal-loan">Personal Loan</a></li>
+<li><a href="#mortgage-loan">Mortgage Loan</a></li>
+<li><a href="#gold-loan">Gold Loan</a></li>
+<li><a href="#vehicle-loan">Vehicle Loan</a></li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>CONTACT US</h4>
+
+<div class="contact">
+    <span>☎</span>
+    <span>+91 XXXXX XXXXX</span>
+</div>
+
+<div class="contact">
+    <span>✉</span>
+    <span>info@thejacindia.com</span>
+</div>
+
+<div class="contact">
+    <span>📍</span>
+    <span>
+        Your Office Address,<br>
+        Tamil Nadu, India
+    </span>
+</div>
+
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+class="whatsapp">
+
+☘ Chat on WhatsApp
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="container copyright">
+
+<span>
+© 2026 The JAC India. All Rights Reserved.
+</span>
+
+<span>
+Made with ♥ in India
+</span>
+
+</div>
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+href="https://wa.me/91XXXXXXXXXX"
+target="_blank"
+class="whatsapp-float">
+
+☘
+
+</a>
+
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("active");
+
+}
+
+
+/* =========================================================
+   EMI CALCULATOR
+========================================================= */
+
+function emi(amount, rate, years){
+
+    let monthlyRate = rate / 12 / 100;
+
+    let months = years * 12;
+
+    if(months <= 0 || amount <= 0){
+        return 0;
+    }
+
+    if(monthlyRate === 0){
+        return amount / months;
+    }
+
+    return (
+        amount *
+        monthlyRate *
+        Math.pow(1 + monthlyRate, months) /
+        (Math.pow(1 + monthlyRate, months) - 1)
+    );
+
+}
+
+
+function formatMoney(value){
+
+    return "₹" + Math.round(value).toLocaleString("en-IN");
+
+}
+
+
+function calculateLoan(){
+
+    let amount =
+        Number(document.getElementById("loanAmount").value) || 0;
+
+    let rate =
+        Number(document.getElementById("interestRate").value) || 0;
+
+    let years =
+        Number(document.getElementById("loanTenure").value) || 0;
+
+
+    let months = years * 12;
+
+    let monthlyEMI = emi(amount, rate, years);
+
+    let totalAmount = monthlyEMI * months;
+
+    let interestAmount = Math.max(totalAmount - amount, 0);
+
+
+    /* MAIN RESULTS */
+
+    document.getElementById("monthlyEMI").innerText =
+        formatMoney(monthlyEMI);
+
+    document.getElementById("principalAmount").innerText =
+        formatMoney(amount);
+
+    document.getElementById("interestAmount").innerText =
+        formatMoney(interestAmount);
+
+    document.getElementById("totalAmount").innerText =
+        formatMoney(totalAmount);
+
+
+    /* GRAPH + SUMMARY */
+
+    document.getElementById("chartPrincipal").innerText =
+        formatMoney(amount);
+
+    document.getElementById("chartInterest").innerText =
+        formatMoney(interestAmount);
+
+    document.getElementById("chartTotal").innerText =
+        formatMoney(totalAmount);
+
+    document.getElementById("summaryLoan").innerText =
+        formatMoney(amount);
+
+    document.getElementById("summaryRate").innerText =
+        rate.toFixed(1) + "%";
+
+    document.getElementById("summaryTenure").innerText =
+        years + (years === 1 ? " Year" : " Years");
+
+
+    /* INTEREST PERCENTAGE */
+
+    let interestPercentage =
+        totalAmount > 0
+        ? (interestAmount / totalAmount) * 100
+        : 0;
+
+    document.getElementById("interestShare").innerText =
+        interestPercentage.toFixed(1) + "%";
+
+
+    /* DONUT GRAPH */
+
+    let principalPercentage =
+        totalAmount > 0
+        ? (amount / totalAmount) * 100
+        : 100;
+
+    let principalAngle =
+        principalPercentage * 3.6;
+
+    let chart =
+        document.getElementById("loanChart");
+
+    chart.style.background =
+        "conic-gradient(" +
+        "var(--blue) 0deg " +
+        principalAngle + "deg, " +
+        "#f59e0b " +
+        principalAngle + "deg 360deg" +
+        ")";
+
+}
+
+
+/* INITIAL CALCULATION */
+
+calculateLoan();
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+function toggleFaq(element){
+
+    let item = element.parentElement;
+
+    item.classList.toggle("active");
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+async function submitFormToEmail(event, form, successMessage){
+
+    event.preventDefault();
+
+    const button = form.querySelector("button[type=\"submit\"]");
+    const originalText = button ? button.innerHTML : "";
+
+    if(button){
+        button.disabled = true;
+        button.innerHTML = "Sending...";
+    }
+
+    try{
+
+        const formData = new FormData(form);
+        const data = {};
+
+        formData.forEach(function(value, key){
+            data[key] = value;
+        });
+
+        const response = await fetch(form.action, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if(!response.ok || result.success === false){
+            throw new Error(result.message || "Form submission failed");
+        }
+
+        form.reset();
+        alert(successMessage);
+
+    }catch(error){
+
+        console.error("Form submission error:", error);
+        alert("Sorry, your submission could not be sent. Please try again.");
+
+    }finally{
+
+        if(button){
+            button.disabled = false;
+            button.innerHTML = originalText;
+        }
+
+    }
+
+}
+
+
+function submitEnquiry(event){
+
+    submitFormToEmail(
+        event,
+        event.currentTarget,
+        "Thank you for your loan enquiry. Our team will contact you shortly."
+    );
+
+}
+
+
+/* =========================================================
+   CONNECTOR FILE FORM
+========================================================= */
+
+function submitConnector(event){
+
+    submitFormToEmail(
+        event,
+        event.currentTarget,
+        "Thank you. Your loan file details have been received. Our team will contact you for the next step."
+    );
+
+}
+
+
+/* =========================================================
+   CLOSE MOBILE MENU WHEN CLICKING LINK
+========================================================= */
+
+document.querySelectorAll(".nav > a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("nav")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+
+</script>
+
+</body>
+</html>
